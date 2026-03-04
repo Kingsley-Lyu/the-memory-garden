@@ -1,0 +1,29 @@
+/* src/components/MemoryWall.module.css */
+.wall { background: var(--white); padding: 6rem 4rem; }
+
+.header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3.5rem;
+}
+
+.filters { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+.filterBtn {
+  padding: 0.45rem 1.2rem; border-radius: 2rem;
+  border: 1.5px solid var(--rose); background: transparent;
+  font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300;
+  color: var(--text-light); cursor: pointer; transition: all 0.25s;
+}
+.filterBtn:hover, .filterBtn.active {
+  background: var(--warm); border-color: var(--warm); color: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .wall { padding: 4rem 1.5rem; }
+}

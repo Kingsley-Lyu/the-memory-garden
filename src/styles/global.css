@@ -1,0 +1,80 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #fdf6ee;
+  --blush: #f5e0d3;
+  --rose: #e8b4a0;
+  --dusty: #c9897a;
+  --warm: #a0614f;
+  --sage: #b8c4a8;
+  --sage-dark: #7d9470;
+  --text: #4a3728;
+  --text-light: #8a6a5a;
+  --white: #fffcf8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', 'Noto Sans SC', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Shared section styles */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.section-title em { font-style: italic; color: var(--warm); }
+
+/* Shared button styles */
+.btn-primary {
+  background: var(--warm);
+  color: var(--white);
+  padding: 0.85rem 2.2rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(160, 97, 79, 0.3);
+}
+.btn-primary:hover { background: var(--dusty); transform: translateY(-2px); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--warm);
+  padding: 0.85rem 2.2rem;
+  border-radius: 3rem;
+  border: 1.5px solid var(--rose);
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.btn-secondary:hover { background: var(--blush); border-color: var(--dusty); }

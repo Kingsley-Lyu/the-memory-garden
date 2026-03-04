@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "memorials": "纪念墙",
+    "candles": "点燃蜡烛",
+    "how": "使用方法",
+    "create": "创建纪念页"
+  },
+  "hero": {
+    "title": "一个<em>纪念</em>我们挚爱的地方",
+    "sub": "每一个爪印，都永远留在心中。为您的爱宠创建一个永久的纪念页，分享他们的故事。",
+    "btn_create": "创建纪念页",
+    "btn_browse": "浏览纪念墙",
+    "scroll": "向下滚动"
+  },
+  "stats": {
+    "memorials": "已创建纪念页",
+    "candles": "已点燃蜡烛",
+    "tributes": "已分享悼念",
+    "countries": "覆盖国家"
+  },
+  "wall": {
+    "label": "深切怀念",
+    "title": "纪念墙",
+    "filter_all": "全部",
+    "filter_dog": "🐶 狗狗",
+    "filter_cat": "🐱 猫咪",
+    "filter_other": "🐰 其他"
+  },
+  "quote": {
+    "text": "没有爱过动物的人，灵魂始终有一部分沉睡未醒。",
+    "source": "— 阿纳托尔·法朗士"
+  },
+  "candles": {
+    "label": "点燃蜡烛",
+    "title": "让他们的光芒永远燃烧",
+    "sub": "为挚爱的宠物点亮一根虚拟蜡烛，让他们的灵魂永远闪耀。",
+    "btn": "🕯️ 点燃蜡烛",
+    "for": "献给"
+  },
+  "how": {
+    "label": "开始使用",
+    "title": "如何使用",
+    "step1_title": "创建纪念页",
+    "step1_desc": "填写宠物的名字、日期、品种，并上传您最喜爱的照片，建立专属纪念页。",
+    "step2_title": "分享故事",
+    "step2_desc": "写下深情的悼词，记录特别的回忆，让世界知道它有多么美好。",
+    "step3_title": "邀请亲友",
+    "step3_desc": "分享专属链接，让家人和朋友留言、点蜡烛、表达哀思。",
+    "step4_title": "永久铭记",
+    "step4_desc": "接收周年纪念提醒，让这份思念永远延续——只要您需要。"
+  },
+  "footer": {
+    "about": "关于我们",
+    "privacy": "隐私政策",
+    "support": "帮助支持",
+    "contact": "联系我们",
+    "copy": "© 2026 记忆花园。用 🤍 制作"
+  },
+  "modal": {
+    "title": "创建纪念页",
+    "sub": "纪念您挚爱的毛茸茸的伙伴。",
+    "name": "宠物名字",
+    "name_ph": "例如：大王、小花…",
+    "species": "种类",
+    "breed": "品种（可选）",
+    "breed_ph": "例如：比熊犬",
+    "dob": "出生日期",
+    "dod": "离世日期",
+    "tribute": "悼念留言",
+    "tribute_ph": "分享一段美好的回忆，或描述它有多特别…",
+    "cancel": "取消",
+    "submit": "创建纪念页 🐾",
+    "forever": "永远在我们心中。"
+  },
+  "species": {
+    "dog": "🐶 狗",
+    "cat": "🐱 猫",
+    "rabbit": "🐰 兔子",
+    "bird": "🐦 鸟",
+    "other": "其他"
+  },
+  "card": {
+    "view": "查看 →"
+  },
+  "alert": {
+    "name_required": "请输入您宠物的名字。"
+  }
+}

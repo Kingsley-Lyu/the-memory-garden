@@ -1,0 +1,76 @@
+/* src/pages/memorial/[id].module.css */
+.page { min-height: 100vh; background: var(--cream); }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 4rem;
+  background: rgba(253,246,238,0.88); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,150,120,0.15);
+}
+.navLogo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--warm); text-decoration: none; }
+.navLogo span { font-style: italic; color: var(--dusty); }
+.langToggle { display: flex; align-items: center; background: var(--blush); border-radius: 2rem; border: 1.5px solid var(--rose); overflow: hidden; }
+.langToggle button { padding: 0.35rem 0.9rem; border: none; background: transparent; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.8rem; color: var(--text-light); transition: all 0.25s; }
+.langToggle button.active { background: var(--warm); color: var(--white); border-radius: 2rem; }
+
+.hero { position: relative; width: 100%; height: 70vh; min-height: 480px; display: flex; align-items: flex-end; overflow: hidden; }
+.heroPhoto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heroEmoji { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 8rem; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(40,25,15,0.85) 0%, rgba(40,25,15,0.2) 60%, transparent 100%); }
+.heroContent { position: relative; z-index: 2; padding: 3rem 4rem; width: 100%; }
+.heroBadge { display: inline-block; background: rgba(253,246,238,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(253,246,238,0.3); padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(253,246,238,0.8); margin-bottom: 1rem; }
+.heroName { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.5rem; }
+.heroDates { font-size: 1rem; font-weight: 300; color: rgba(253,246,238,0.7); letter-spacing: 0.1em; }
+
+.container { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+
+.tribute { text-align: center; margin-bottom: 3rem; }
+.tributeLabel { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 1.2rem; }
+.tributeQuote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 300; font-style: italic; line-height: 1.6; color: var(--text); border: none; margin: 0; padding: 0; }
+
+.reactions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem; padding: 2rem; background: var(--white); border-radius: 1.5rem; border: 1px solid rgba(200,150,120,0.15); }
+.reactionBtn { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; padding: 1rem 1.8rem; border-radius: 1rem; border: 1.5px solid var(--rose); background: var(--cream); cursor: pointer; transition: all 0.25s; font-family: 'Jost', sans-serif; }
+.reactionBtn:hover { background: var(--blush); transform: translateY(-2px); }
+.reactionBtn.reacted { background: var(--blush); border-color: var(--dusty); }
+.reactionEmoji { font-size: 1.8rem; }
+.reactionCount { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--warm); }
+.reactionLabel { font-size: 0.75rem; font-weight: 300; color: var(--text-light); letter-spacing: 0.05em; }
+.shareBtn { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; padding: 1rem 1.8rem; border-radius: 1rem; border: 1.5px solid var(--sage); background: var(--cream); cursor: pointer; transition: all 0.25s; font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 300; color: var(--text-light); letter-spacing: 0.04em; }
+.shareBtn:hover { background: #eef2e8; transform: translateY(-2px); }
+
+.messagesSection { margin-bottom: 4rem; }
+.messagesTitle { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--text); margin-bottom: 1.5rem; }
+.messageForm { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+.messageInput { width: 100%; padding: 1rem; border-radius: 1rem; border: 1.5px solid var(--rose); background: var(--white); font-family: 'Jost', sans-serif; font-size: 0.9rem; font-weight: 300; color: var(--text); outline: none; resize: vertical; transition: border-color 0.2s; }
+.messageInput:focus { border-color: var(--warm); }
+.messageSubmit { align-self: flex-end; padding: 0.75rem 1.8rem; border-radius: 3rem; border: none; background: var(--warm); color: var(--white); font-family: 'Jost', sans-serif; font-size: 0.85rem; cursor: pointer; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.2s; }
+.messageSubmit:hover { background: var(--dusty); }
+.messageSubmit:disabled { background: var(--rose); cursor: not-allowed; }
+
+.messagesList { display: flex; flex-direction: column; gap: 1rem; }
+.messageItem { display: flex; gap: 1rem; align-items: flex-start; background: var(--white); padding: 1.2rem 1.5rem; border-radius: 1rem; border: 1px solid rgba(200,150,120,0.15); animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.messageAvatar { font-size: 1.4rem; flex-shrink: 0; }
+.messageBody { flex: 1; }
+.messageText { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--text); }
+.messageTime { font-size: 0.72rem; font-weight: 300; color: var(--text-light); letter-spacing: 0.05em; margin-top: 0.4rem; display: block; }
+
+.backLink { text-align: center; margin-bottom: 2rem; }
+.backLink a { font-size: 0.85rem; font-weight: 300; color: var(--text-light); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+.backLink a:hover { color: var(--warm); }
+
+.footer { background: var(--text); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footerLogo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--blush); font-weight: 300; }
+.footerLogo em { font-style: italic; color: var(--rose); }
+.footerCopy { font-size: 0.78rem; font-weight: 300; color: rgba(245,224,211,0.4); }
+
+.notFound { display: flex; align-items: center; justify-content: center; height: 100vh; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text-light); }
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .heroContent { padding: 2rem 1.5rem; }
+  .container { padding: 3rem 1.5rem; }
+  .footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+  .reactions { gap: 0.7rem; }
+}

@@ -1,0 +1,51 @@
+/* src/components/Navbar.module.css */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 4rem;
+  background: rgba(253, 246, 238, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 150, 120, 0.15);
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; letter-spacing: 0.02em;
+  color: var(--warm);
+}
+.logo span { font-style: italic; color: var(--dusty); }
+
+.right { display: flex; align-items: center; gap: 2rem; }
+
+.links { display: flex; gap: 2rem; list-style: none; }
+.links a {
+  font-size: 0.85rem; font-weight: 300; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--text-light); transition: color 0.3s;
+}
+.links a:hover { color: var(--warm); }
+
+.cta {
+  background: var(--warm); color: var(--white) !important;
+  padding: 0.5rem 1.4rem; border-radius: 2rem;
+  font-weight: 400 !important; transition: background 0.3s !important;
+}
+.cta:hover { background: var(--dusty) !important; }
+
+.langToggle {
+  display: flex; align-items: center;
+  background: var(--blush); border-radius: 2rem;
+  border: 1.5px solid var(--rose); overflow: hidden;
+}
+.langToggle button {
+  padding: 0.35rem 0.9rem; border: none; background: transparent;
+  cursor: pointer; font-family: 'Jost', 'Noto Sans SC', sans-serif;
+  font-size: 0.8rem; color: var(--text-light); transition: all 0.25s;
+}
+.langToggle button.active { background: var(--warm); color: var(--white); border-radius: 2rem; }
+.langToggle button:hover:not(.active) { color: var(--warm); }
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .links { display: none; }
+}

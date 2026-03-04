@@ -1,0 +1,37 @@
+/* src/pages/index.module.css */
+
+/* Stats */
+.stats { background: var(--blush); padding: 2rem 4rem; display: flex; justify-content: center; gap: 5rem; flex-wrap: wrap; border-top: 1px solid rgba(200,140,120,0.2); border-bottom: 1px solid rgba(200,140,120,0.2); }
+.statItem { text-align: center; }
+.statNum { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 400; color: var(--warm); }
+.statLabel { font-size: 0.78rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-top: 0.2rem; }
+
+/* Quote */
+.quoteBanner { background: var(--blush); padding: 5rem 4rem; text-align: center; border-top: 1px solid rgba(200,140,120,0.2); border-bottom: 1px solid rgba(200,140,120,0.2); }
+.quoteText { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--text); max-width: 700px; margin: 0 auto; }
+.quoteSource { font-size: 0.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-top: 1.2rem; }
+
+/* How it works */
+.howSection { background: var(--cream); padding: 6rem 4rem; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-top: 3.5rem; }
+.step {}
+.stepNum { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--blush); line-height: 1; margin-bottom: 1rem; position: relative; display: inline-block; }
+.stepNum::after { content: ''; position: absolute; bottom: 0.5rem; left: 0; right: 0; height: 2px; background: var(--rose); border-radius: 1px; }
+.stepTitle { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; color: var(--text); margin-bottom: 0.6rem; }
+.stepDesc { font-size: 0.9rem; font-weight: 300; line-height: 1.8; color: var(--text-light); }
+
+/* Footer */
+.footer { background: var(--text); padding: 3rem 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footerLogo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--blush); font-weight: 300; }
+.footerLogo em { font-style: italic; color: var(--rose); }
+.footerLinks { display: flex; gap: 1.8rem; }
+.footerLinks a { font-size: 0.78rem; font-weight: 300; letter-spacing: 0.06em; text-decoration: none; color: rgba(245,224,211,0.5); transition: color 0.3s; }
+.footerLinks a:hover { color: var(--rose); }
+.footerCopy { font-size: 0.78rem; font-weight: 300; color: rgba(245,224,211,0.4); letter-spacing: 0.05em; }
+
+@media (max-width: 768px) {
+  .stats { padding: 1.5rem; gap: 2rem; }
+  .howSection { padding: 4rem 1.5rem; }
+  .quoteBanner { padding: 3rem 1.5rem; }
+  .footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+}

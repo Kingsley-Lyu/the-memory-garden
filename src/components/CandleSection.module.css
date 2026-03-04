@@ -1,0 +1,40 @@
+/* src/components/CandleSection.module.css */
+.section {
+  background: linear-gradient(135deg, #2d1e14 0%, #3d2818 100%);
+  text-align: center; padding: 6rem 4rem;
+}
+.section :global(.section-label) { color: var(--rose); }
+.section :global(.section-title) { color: var(--cream); }
+.section :global(.section-title em) { color: var(--rose); }
+
+.sub {
+  font-size: 1rem; font-weight: 300; color: rgba(253,246,238,0.6);
+  margin-top: 0.8rem; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.8;
+}
+
+.candles { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 3rem 0; }
+
+.candle { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; cursor: pointer; transition: transform 0.3s; }
+.candle:hover { transform: scale(1.1); }
+
+.flame { font-size: 2rem; animation: flicker 2.5s ease-in-out infinite; }
+.candle:nth-child(2) .flame { animation-delay: 0.4s; }
+.candle:nth-child(3) .flame { animation-delay: 0.9s; }
+.candle:nth-child(4) .flame { animation-delay: 0.2s; }
+.candle:nth-child(5) .flame { animation-delay: 0.7s; }
+
+@keyframes flicker {
+  0%,100%{transform:scale(1) rotate(-1deg);opacity:0.9}
+  30%{transform:scale(1.1) rotate(1deg);opacity:1}
+  60%{transform:scale(0.95) rotate(-0.5deg);opacity:0.85}
+}
+
+.label { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.06em; color: rgba(253,246,238,0.5); }
+
+.btn {
+  background: transparent; border: 1.5px solid var(--rose);
+  color: var(--rose); padding: 0.85rem 2.2rem; border-radius: 3rem;
+  font-family: 'Jost', sans-serif; font-size: 0.88rem; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: all 0.3s;
+}
+.btn:hover { background: var(--rose); color: #2d1e14; }

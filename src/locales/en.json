@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "memorials": "Memorials",
+    "candles": "Candles",
+    "how": "How it works",
+    "create": "Create Memorial"
+  },
+  "hero": {
+    "title": "A place to <em>honour</em> those we've loved",
+    "sub": "Because every paw print leaves a mark on the heart. Create a lasting memorial and share the story of your beloved companion.",
+    "btn_create": "Create a Memorial",
+    "btn_browse": "Browse Memorials",
+    "scroll": "Scroll"
+  },
+  "stats": {
+    "memorials": "Memorials created",
+    "candles": "Candles lit",
+    "tributes": "Tributes shared",
+    "countries": "Countries reached"
+  },
+  "wall": {
+    "label": "In loving memory",
+    "title": "The Memory Wall",
+    "filter_all": "All",
+    "filter_dog": "🐶 Dogs",
+    "filter_cat": "🐱 Cats",
+    "filter_other": "🐰 Others"
+  },
+  "quote": {
+    "text": "Until one has loved an animal, a part of one's soul remains unawakened.",
+    "source": "— Anatole France"
+  },
+  "candles": {
+    "label": "Light a candle",
+    "title": "Keep their light burning",
+    "sub": "Light a virtual candle in memory of a beloved pet and let their spirit glow.",
+    "btn": "🕯️ Light a Candle",
+    "for": "For"
+  },
+  "how": {
+    "label": "Getting started",
+    "title": "How it works",
+    "step1_title": "Create a Memorial",
+    "step1_desc": "Fill in your pet's name, dates, breed, and upload your favourite photos to build their personal page.",
+    "step2_title": "Share their Story",
+    "step2_desc": "Write a heartfelt tribute, add special memories, and let the world know just how wonderful they were.",
+    "step3_title": "Invite Loved Ones",
+    "step3_desc": "Share a unique link so friends and family can leave messages, light candles, and pay their respects.",
+    "step4_title": "Remember Forever",
+    "step4_desc": "Receive anniversary reminders and keep their memory alive — for as long as you need."
+  },
+  "footer": {
+    "about": "About",
+    "privacy": "Privacy",
+    "support": "Support",
+    "contact": "Contact",
+    "copy": "© 2026 The Memory Garden. Made with 🤍"
+  },
+  "modal": {
+    "title": "Create a Memorial",
+    "sub": "Celebrate the life of your beloved companion.",
+    "name": "Pet's Name",
+    "name_ph": "e.g. Da Wang, Buddy…",
+    "species": "Species",
+    "breed": "Breed (optional)",
+    "breed_ph": "e.g. Golden Retriever",
+    "dob": "Date of Birth",
+    "dod": "Date Passed",
+    "tribute": "A tribute message",
+    "tribute_ph": "Share a favourite memory or what made them so special…",
+    "cancel": "Cancel",
+    "submit": "Create Memorial 🐾",
+    "forever": "Forever in our hearts."
+  },
+  "species": {
+    "dog": "🐶 Dog",
+    "cat": "🐱 Cat",
+    "rabbit": "🐰 Rabbit",
+    "bird": "🐦 Bird",
+    "other": "Other"
+  },
+  "card": {
+    "view": "View →"
+  },
+  "alert": {
+    "name_required": "Please enter your pet's name."
+  }
+}

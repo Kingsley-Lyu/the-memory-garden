@@ -1,0 +1,62 @@
+/* src/components/HeroSection.module.css */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative; text-align: center; padding: 6rem 2rem 4rem;
+  background: radial-gradient(ellipse at 60% 40%, #fde8da 0%, #fdf6ee 55%, #eef2e8 100%);
+  overflow: hidden;
+}
+
+.deco { position: absolute; border-radius: 50%; opacity: 0.25; pointer-events: none; }
+.deco1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, #f2c4ae, transparent 70%);
+  top: -150px; right: -100px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.deco2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #b8c4a8, transparent 70%);
+  bottom: -80px; left: -80px;
+  animation: floatB 10s ease-in-out infinite;
+}
+@keyframes floatA { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-20px) scale(1.05)} }
+@keyframes floatB { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(15px) scale(0.97)} }
+
+.paw { font-size: 2.5rem; margin-bottom: 1.5rem; animation: fadeDown 1s ease both; }
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300; line-height: 1.1; color: var(--text);
+  animation: fadeDown 1s ease 0.1s both;
+}
+.title :global(em) { font-style: italic; color: var(--warm); }
+
+.sub {
+  margin-top: 1.5rem; max-width: 480px;
+  font-size: 1.05rem; font-weight: 300; line-height: 1.8;
+  color: var(--text-light);
+  animation: fadeDown 1s ease 0.25s both;
+}
+
+.actions {
+  display: flex; gap: 1rem; margin-top: 2.5rem;
+  flex-wrap: wrap; justify-content: center;
+  animation: fadeDown 1s ease 0.4s both;
+}
+
+.scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  color: var(--text-light); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+  animation: fadeDown 1s ease 0.7s both;
+}
+.scrollLine {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--rose), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+@keyframes fadeDown { from{opacity:0;transform:translateY(-18px)} to{opacity:1;transform:translateY(0)} }

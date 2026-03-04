@@ -1,0 +1,66 @@
+// src/data/pets.js
+// This is sample/seed data.
+// In a real app, this would come from your database (e.g. Supabase).
+
+export const samplePets = [
+  {
+    id: 1,
+    name: 'Da Wang',
+    type: 'dog',
+    breed: 'Westie & Bomi Mix',
+    born: '2019',
+    died: '2025',
+    quote: 'Forever our Great King. You brought joy to every single day.',
+    reactions: { candle: 0, heart: 0 },
+  },
+  {
+    id: 2,
+    name: 'Buddy',
+    type: 'dog',
+    breed: 'Golden Retriever',
+    born: '2009',
+    died: '2022',
+    quote: 'He greeted every single morning like it was the best day of his life.',
+    reactions: { candle: 24, heart: 61 },
+  },
+  {
+    id: 3,
+    name: 'Mochi',
+    type: 'cat',
+    breed: 'Ragdoll',
+    born: '2012',
+    died: '2024',
+    quote: "The softest soul I have ever known. She never met a lap she didn't like.",
+    reactions: { candle: 18, heart: 44 },
+  },
+  {
+    id: 4,
+    name: 'Peanut',
+    type: 'rabbit',
+    breed: 'Holland Lop',
+    born: '2018',
+    died: '2023',
+    quote: 'Our little binkying bean who turned every afternoon into playtime.',
+    reactions: { candle: 9, heart: 22 },
+  },
+  {
+    id: 5,
+    name: 'Luna',
+    type: 'dog',
+    breed: 'Border Collie',
+    born: '2011',
+    died: '2023',
+    quote: 'She herded our hearts from the first moment. There will never be another Luna.',
+    reactions: { candle: 31, heart: 87 },
+  },
+  {
+    id: 6,
+    name: 'Cleo',
+    type: 'cat',
+    breed: 'Siamese',
+    born: '2008',
+    died: '2021',
+    quote: 'A queen in every sense. Her opinions were many, her love was unconditional.',
+    reactions: { candle: 15, heart: 39 },
+  },
+];

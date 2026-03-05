@@ -1,43 +1,51 @@
 // src/components/CandleSection.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getMemorials } from '../utils/db';
 import styles from './CandleSection.module.css';
 
-const initialCandles = [
-  { name: 'Da Wang' }, { name: 'Buddy' }, { name: 'Mochi' },
-  { name: 'Luna' }, { name: 'Cleo' }, { name: 'Peanut' },
-];
-
 export default function CandleSection({ t }) {
-  const [candles, setCandles] = useState(initialCandles);
+  const [pets, setPets] = useState([]);
+  const [lit, setLit] = useState({});
 
-  const addCandle = () => {
-    const name = prompt(t('candles.for') + '...');
-    if (name?.trim()) {
-      setCandles((prev) => [...prev, { name: name.trim() }]);
-    }
+  useEffect(() => {
+    getMemorials().then(({ data }) => {
+      if (data) setPets(data.slice(0, 6));
+    });
+  }, []);
+
+  const handleLight = (id) => {
+    setLit((prev) => ({ ...prev, [id]: true }));
   };
 
   return (
     <section className={styles.section} id="candles">
-      <div className="section-label">{t('candles.label')}</div>
+      <div className="section-label">Light a candle</div>
       <h2 className="section-title">
-        {t('candles.title').split(' ').slice(0, -1).join(' ')}{' '}
-        <em>{t('candles.title').split(' ').slice(-1)}</em>
+        Keep their light <em>burning</em>
       </h2>
-      <p className={styles.sub}>{t('candles.sub')}</p>
+      <p className={styles.sub}>Light a virtual candle in memory of a beloved pet and let their spirit glow.</p>
 
-      <div className={styles.candles}>
-        {candles.map((c, i) => (
-          <div key={i} className={styles.candle}>
-            <div className={styles.flame}>🕯️</div>
-            <div className={styles.label}>{t('candles.for')} {c.name}</div>
-          </div>
-        ))}
+      <div className={styles.grid}>
+        {pets.length === 0 ? (
+          <p style={{ color: 'var(--text-light)', fontWeight: 300, gridColumn: '1/-1', textAlign: 'center' }}>
+            No memorials yet — be the first to create one. 🐾
+          </p>
+        ) : (
+          pets.map((pet) => (
+            <div key={pet.id} className={`${styles.candle} ${lit[pet.id] ? styles.lit : ''}`}>
+              <div className={styles.flame}>🕯️</div>
+              <div className={styles.petName}>For {pet.name}</div>
+              <button
+                className={styles.lightBtn}
+                onClick={() => handleLight(pet.id)}
+                disabled={lit[pet.id]}
+              >
+                {lit[pet.id] ? '✨ Lit' : '🕯️ Light a Candle'}
+              </button>
+            </div>
+          ))
+        )}
       </div>
-
-      <button className={styles.btn} onClick={addCandle}>
-        {t('candles.btn')}
-      </button>
     </section>
   );
 }

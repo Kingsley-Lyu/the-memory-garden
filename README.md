@@ -37,6 +37,16 @@ the-memory-garden/
 
 ---
 
+## 📸 Screenshots
+
+**Homepage**
+![Homepage](assets/homepage.png)
+
+**Memory Wall**
+![Memory Wall](assets/memory%20wall.png)
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Install dependencies

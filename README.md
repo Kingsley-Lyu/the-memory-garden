@@ -16,6 +16,8 @@ The Memory Garden lets people create lasting digital memorials for beloved pets.
 - 🕯️ **54+ candles** lit
 - 🐾 Built in memory of Da Wang (2009–2025)
 
+![Homepage](assets/homepage.png)
+![Memory Wall](assets/memory%20wall.png)
 ---
 
 ## Features

@@ -1,81 +1,90 @@
 # 🌿 The Memory Garden
 
-A warm, bilingual (EN / 中文) pet memorial website built with **Next.js**.
+**A warm, bilingual pet memorial platform — built with Next.js and Supabase.**
+
+> Because every paw print leaves a mark on the heart.
+
+🔗 **Live:** [the-memory-garden-v2.vercel.app](https://the-memory-garden-v2.vercel.app/)
 
 ---
 
-## 📁 Project Structure
+## What it is
+
+The Memory Garden lets people create lasting digital memorials for beloved pets. Users can write tributes, upload photos, light virtual candles, and share a unique memorial page with friends and family.
+
+- 🌍 Users across **190+ countries**
+- 🕯️ **54+ candles** lit
+- 🐾 Built in memory of Da Wang (2009–2025)
+
+---
+
+## Features
+
+- **Memorial Wall** — browse all tributes in a filterable grid
+- **Individual Memorial Pages** — each pet gets a unique public URL
+- **Virtual Candles** — light a candle in someone's memory
+- **Bilingual** — full EN / 中文 support via custom i18n hook
+- **Auth** — sign in to create and manage your own memorials
+- **Photo uploads** — images stored in Supabase Storage
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Next.js (React) |
+| Backend / Database | Supabase (PostgreSQL) |
+| Auth | Supabase Auth |
+| File Storage | Supabase Storage |
+| i18n | Custom `useLanguage` hook (EN / ZH JSON) |
+| Deployment | Vercel |
+
+---
+
+## Project Structure
 
 ```
 the-memory-garden/
-├── public/                  # Static assets (images, favicon)
+├── public/                  # Static assets
 ├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Navbar.jsx           ← Top navigation + language toggle
+│   ├── components/
+│   │   ├── Navbar.jsx           ← Navigation + language toggle
 │   │   ├── HeroSection.jsx      ← Landing hero
 │   │   ├── MemoryWall.jsx       ← Grid of memorial cards
 │   │   ├── MemorialCard.jsx     ← Individual pet card
 │   │   ├── CandleSection.jsx    ← Virtual candles
 │   │   └── CreateModal.jsx      ← Create memorial form
-│   ├── pages/               # Next.js pages (each = a URL)
-│   │   ├── _app.jsx             ← Global app wrapper
-│   │   ├── _document.jsx        ← HTML head/meta
-│   │   └── index.jsx            ← Homepage (/)
-│   ├── styles/
-│   │   └── global.css           ← Global CSS variables & shared styles
-│   ├── locales/             # Translation files
-│   │   ├── en.json              ← English text
-│   │   └── zh.json              ← Chinese text
-│   ├── data/
-│   │   └── pets.js              ← Sample pet data (replace with DB later)
+│   ├── pages/
+│   │   ├── index.jsx            ← Homepage
+│   │   └── memorial/[id].jsx    ← Individual memorial page
+│   ├── locales/
+│   │   ├── en.json              ← English strings
+│   │   └── zh.json              ← Chinese strings
 │   └── hooks/
-│       └── useLanguage.js       ← Custom hook for EN/ZH switching
+│       └── useLanguage.js       ← EN/ZH switching hook
 ├── next.config.js
-├── package.json
-└── README.md
+└── package.json
 ```
 
 ---
 
-## 📸 Screenshots
+## Getting Started (local dev)
 
-**Homepage**
-![Homepage](assets/homepage.png)
-
-**Memory Wall**
-![Memory Wall](assets/memory%20wall.png)
-
----
-
-## 🚀 Getting Started
-
-### 1. Install dependencies
 ```bash
+# Install dependencies
 npm install
-```
 
-### 2. Run the development server
-```bash
+# Add environment variables
+cp .env.example .env.local
+# Fill in your Supabase URL and anon key
+
+# Run dev server
 npm run dev
 ```
 
-### 3. Open in browser
-```
-http://localhost:3000
-```
+Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🛠 Adding a Real Backend (Next Steps)
-
-| Feature | Tool |
-|---|---|
-| Database (save memorials) | [Supabase](https://supabase.com) |
-| User authentication | Supabase Auth |
-| Image uploads | Supabase Storage or Cloudinary |
-| Deploy online | [Vercel](https://vercel.com) (free) |
-
----
-
-## 🐾 In memory of Da Wang (2019–2025)
-*Forever our Great King.*
+*In loving memory of Da Wang (2009–2025). Forever our Great King. 🐾*
